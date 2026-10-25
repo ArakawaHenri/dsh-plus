@@ -1,0 +1,11 @@
+/node_modules/*
+!/node_modules/@dshplus/
+/node_modules/@dshplus/*
+!/node_modules/@dshplus/native-search/
+!/node_modules/@dshplus/session-edit/
+!/node_modules/@dshplus/session-delete/
+!/node_modules/@dshplus/fake-ip/
+*.log
+*.tgz
+.DS_Store
+test-results/

@@ -1,0 +1,26 @@
+- insert:
+    - id: dshplus-native-search
+      name: '@dshplus/native-search'
+      config: {}
+    - id: dshplus-session-edit
+      name: '@dshplus/session-edit'
+      config: {}
+    - id: dshplus-session-delete
+      name: '@dshplus/session-delete'
+      config: {}
+    - id: dshplus-fake-ip
+      name: '@dshplus/fake-ip'
+      config:
+        mode: fake-ip
+        allowCidrs:
+          - 198.18.0.0/15
+
+# Cordis replaces the whole config object, so keep both providers here.
+- id: web
+  name: '@deepseek-ai/dsh-web'
+  config:
+    searchProvider: native-preferring
+    fetchProvider: http
+
+- id: web-fetch-http
+  disabled: true

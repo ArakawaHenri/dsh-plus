@@ -1,0 +1,12 @@
+[submodule "plugins/search"]
+	path = plugins/search
+	url = https://github.com/ArakawaHenri/dshplus-native-search.git
+[submodule "plugins/session-edit"]
+	path = plugins/session-edit
+	url = https://github.com/ArakawaHenri/dshplus-session-edit.git
+[submodule "plugins/session-delete"]
+	path = plugins/session-delete
+	url = https://github.com/ArakawaHenri/dshplus-session-delete.git
+[submodule "plugins/web-fetch-fake-ip"]
+	path = plugins/web-fetch-fake-ip
+	url = https://github.com/ArakawaHenri/dshplus-fake-ip.git

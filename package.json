@@ -1,0 +1,69 @@
+{
+  "name": "@dshplus/bundle",
+  "version": "0.0.1",
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "DSH Plus: native search, session editing and deletion, and Fake-IP web fetching",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArakawaHenri/dshplus.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ArakawaHenri/dshplus/issues"
+  },
+  "homepage": "https://github.com/ArakawaHenri/dshplus#readme",
+  "icon": "./icon.svg",
+  "engines": {
+    "node": ">=24",
+    "dsh": ">=0.2.1-rc.2"
+  },
+  "exports": {
+    "./icon": "./icon.svg",
+    "./locale/*.json": "./locale/*.json",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "cordis.patch.yml",
+    "icon.svg",
+    "locale/*.json",
+    "README.md",
+    "README.zh.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "scripts": {
+    "setup": "node scripts/plugins.mjs ci",
+    "build": "node scripts/plugins.mjs build && node scripts/bundle.mjs",
+    "check": "node scripts/plugins.mjs check && node scripts/bundle.mjs --check",
+    "test": "node scripts/plugins.mjs test",
+    "test:bundle": "node scripts/smoke.mjs"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/schemastery": "~3.18.5",
+    "@deepseek-ai/dsh-llm": ">=0.2.1-rc.2",
+    "@deepseek-ai/dsh-session": ">=0.2.1-rc.2",
+    "@deepseek-ai/dsh-typert-protocol": ">=0.2.1-rc.2",
+    "@deepseek-ai/dsh-web": ">=0.2.0-rc.1 <0.3.0",
+    "@deepseek-ai/dsh-web-fetch-http": ">=0.2.0-rc.1 <0.3.0"
+  },
+  "dependencies": {
+    "@dshplus/native-search": "0.0.1",
+    "@dshplus/session-edit": "0.0.1",
+    "@dshplus/session-delete": "0.0.1",
+    "@dshplus/fake-ip": "0.0.1"
+  },
+  "bundleDependencies": [
+    "@dshplus/native-search",
+    "@dshplus/session-edit",
+    "@dshplus/session-delete",
+    "@dshplus/fake-ip"
+  ]
+}
